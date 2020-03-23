@@ -6,4 +6,4 @@ a single datastream on a unified coordinate grid.
   
 This project also includes test data and a Docker container for running, testing, and debugging the code.
 
-Please see the **[docker/README-DOCKER.md](../blob/master/docker/README-DOCKER.md)** file for instructions on how to setup your local container, run, and debug the tutorial code.
+Please see the **[docker/README-DOCKER.md](../master/docker/README-DOCKER.md)** file for instructions on how to setup your local container, run, and debug the tutorial code.
