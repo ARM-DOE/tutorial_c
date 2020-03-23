@@ -1,0 +1,12 @@
+139c139
+< 		:command_line = "tutorial_vap -s sgp -f C1 -b 20140101 -e 20140102 -D 2" ;
+---
+> 		:command_line = "tutorial_c -s sgp -f C1 -b 20140101 -e 20140102 -a dsdb_data" ;
+141c141
+< 		:process_version = "$" ;
+---
+> 		:process_version = "-1.0-0.dev1.4.19.76-linuxkit" ;
+153c153
+< 		:history = "created by user gaustad on machine lead at 2017-08-07 19:35:55, using $" ;
+---
+> 		:history = "created by user armdev7 on machine tutorial_c at 2020-02-25 01:25:24, using -1.0-0.dev1.4.19.76-linuxkit" ;

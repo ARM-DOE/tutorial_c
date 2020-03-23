@@ -1,0 +1,99 @@
+**** OPENED: 2020-02-25 01:15:51
+
+Processing data: 2014-01-01 00:00:00 -> 2014-01-02 00:00:00
+Using bin averaging for dim time in field backscatter
+Using interpolation for dim range in field backscatter
+Using interpolation for dim time in field temperature
+Storing:    sgptutorial30sE13.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:30': 2880 records
+Storing:    sgptutorialE13.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:00': 1440 records
+
+Datastream Stats: sgptutorial30sE13.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:30
+ - total records: 2880
+
+Datastream Stats: sgptutorialE13.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:00
+ - total records: 1440
+
+Current Status (2020-02-25 01:16:19):
+Process: sgpE13-tutorial_c-VAP
+Version: -1.0-0.dev1.4.19.76-linuxkit
+Host:    tutorial_c
+Status:  Successful
+
+
+Executable File Name:  tutorial_c
+Process Image Size:    264404 Kbytes
+Resident Set Size:     80920 Kbytes
+Total CPU Time:        4.82 seconds
+
+Run time: 28 seconds
+**** CLOSED: 2020-02-25 01:16:19
+**** OPENED: 2020-02-25 01:22:29
+
+Processing data: 2014-01-01 00:00:00 -> 2014-01-02 00:00:00
+Using bin averaging for dim time in field backscatter
+Using interpolation for dim range in field backscatter
+Using interpolation for dim time in field temperature
+Storing:    sgptutorial30sE13.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:30': 2880 records
+Storing:    sgptutorialE13.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:00': 1440 records
+
+Datastream Stats: sgptutorial30sE13.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:30
+ - total records: 2880
+
+Datastream Stats: sgptutorialE13.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:00
+ - total records: 1440
+
+Current Status (2020-02-25 01:22:57):
+Process: sgpE13-tutorial_c-VAP
+Version: -1.0-0.dev1.4.19.76-linuxkit
+Host:    tutorial_c
+Status:  Successful
+
+
+Executable File Name:  tutorial_c
+Process Image Size:    264404 Kbytes
+Resident Set Size:     80980 Kbytes
+Total CPU Time:        4.78 seconds
+
+Run time: 28 seconds
+**** CLOSED: 2020-02-25 01:22:57
+**** OPENED: 2020-02-25 01:26:03
+
+Processing data: 2014-01-01 00:00:00 -> 2014-01-02 00:00:00
+Using bin averaging for dim time in field backscatter
+Using interpolation for dim range in field backscatter
+Using interpolation for dim time in field temperature
+Storing:    sgptutorial30sE13.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:30': 2880 records
+Storing:    sgptutorialE13.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:00': 1440 records
+
+Datastream Stats: sgptutorial30sE13.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:30
+ - total records: 2880
+
+Datastream Stats: sgptutorialE13.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:00
+ - total records: 1440
+
+Current Status (2020-02-25 01:26:31):
+Process: sgpE13-tutorial_c-VAP
+Version: -1.0-0.dev1.4.19.76-linuxkit
+Host:    tutorial_c
+Status:  Successful
+
+
+Executable File Name:  tutorial_c
+Process Image Size:    264404 Kbytes
+Resident Set Size:     80736 Kbytes
+Total CPU Time:        4.79 seconds
+
+Run time: 28 seconds
+**** CLOSED: 2020-02-25 01:26:31

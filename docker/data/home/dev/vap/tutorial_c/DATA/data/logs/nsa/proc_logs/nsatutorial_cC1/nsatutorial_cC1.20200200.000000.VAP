@@ -1,0 +1,152 @@
+**** OPENED: 2020-02-24 22:19:41
+
+Processing data: 2014-01-01 00:00:00 -> 2014-01-02 00:00:00
+No data found for required datastream nsaceilC1.b1 after 2014-01-01 00:00:00
+ -> waiting for input data before continuing
+
+Current Status (2020-02-24 22:19:41):
+Process: nsaC1-tutorial_c-VAP
+Version: -1.0-0.dev1.4.19.76-linuxkit
+Host:    tutorial_c
+Status:  No Input Data Found
+
+
+Executable File Name:  tutorial_c
+Process Image Size:    193964 Kbytes
+Resident Set Size:     9636 Kbytes
+Total CPU Time:        0.05 seconds
+
+Run time: 0 seconds
+**** CLOSED: 2020-02-24 22:19:41
+**** OPENED: 2020-02-24 23:01:53
+
+Processing data: 2014-01-01 00:00:00 -> 2014-01-02 00:00:00
+Using bin averaging for dim time in field backscatter
+Using interpolation for dim range in field backscatter
+Using interpolation for dim time in field temperature
+Storing:    nsatutorial30sC1.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:30': 2880 records
+Storing:    nsatutorialC1.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:00': 1440 records
+
+Datastream Stats: nsatutorial30sC1.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:30
+ - total records: 2880
+
+Datastream Stats: nsatutorialC1.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:00
+ - total records: 1440
+
+Current Status (2020-02-24 23:02:21):
+Process: nsaC1-tutorial_c-VAP
+Version: -1.0-0.dev1.4.19.76-linuxkit
+Host:    tutorial_c
+Status:  Successful
+
+
+Executable File Name:  tutorial_c
+Process Image Size:    264420 Kbytes
+Resident Set Size:     80756 Kbytes
+Total CPU Time:        4.81 seconds
+
+Run time: 28 seconds
+**** CLOSED: 2020-02-24 23:02:21
+**** OPENED: 2020-02-25 01:14:31
+
+Processing data: 2014-01-01 00:00:00 -> 2014-01-02 00:00:00
+Using bin averaging for dim time in field backscatter
+Using interpolation for dim range in field backscatter
+Using interpolation for dim time in field temperature
+Storing:    nsatutorial30sC1.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:30': 2880 records
+Storing:    nsatutorialC1.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:00': 1440 records
+
+Datastream Stats: nsatutorial30sC1.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:30
+ - total records: 2880
+
+Datastream Stats: nsatutorialC1.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:00
+ - total records: 1440
+
+Current Status (2020-02-25 01:14:59):
+Process: nsaC1-tutorial_c-VAP
+Version: -1.0-0.dev1.4.19.76-linuxkit
+Host:    tutorial_c
+Status:  Successful
+
+
+Executable File Name:  tutorial_c
+Process Image Size:    264420 Kbytes
+Resident Set Size:     80848 Kbytes
+Total CPU Time:        4.84 seconds
+
+Run time: 28 seconds
+**** CLOSED: 2020-02-25 01:14:59
+**** OPENED: 2020-02-25 01:21:10
+
+Processing data: 2014-01-01 00:00:00 -> 2014-01-02 00:00:00
+Using bin averaging for dim time in field backscatter
+Using interpolation for dim range in field backscatter
+Using interpolation for dim time in field temperature
+Storing:    nsatutorial30sC1.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:30': 2880 records
+Storing:    nsatutorialC1.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:00': 1440 records
+
+Datastream Stats: nsatutorial30sC1.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:30
+ - total records: 2880
+
+Datastream Stats: nsatutorialC1.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:00
+ - total records: 1440
+
+Current Status (2020-02-25 01:21:38):
+Process: nsaC1-tutorial_c-VAP
+Version: -1.0-0.dev1.4.19.76-linuxkit
+Host:    tutorial_c
+Status:  Successful
+
+
+Executable File Name:  tutorial_c
+Process Image Size:    264420 Kbytes
+Resident Set Size:     80832 Kbytes
+Total CPU Time:        4.74 seconds
+
+Run time: 28 seconds
+**** CLOSED: 2020-02-25 01:21:38
+**** OPENED: 2020-02-25 01:24:44
+
+Processing data: 2014-01-01 00:00:00 -> 2014-01-02 00:00:00
+Using bin averaging for dim time in field backscatter
+Using interpolation for dim range in field backscatter
+Using interpolation for dim time in field temperature
+Storing:    nsatutorial30sC1.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:30': 2880 records
+Storing:    nsatutorialC1.c1 data from '2014-01-01 00:00:00' to '2014-01-01 23:59:00': 1440 records
+
+Datastream Stats: nsatutorial30sC1.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:30
+ - total records: 2880
+
+Datastream Stats: nsatutorialC1.c1
+ - begin time:    2014-01-01 00:00:00
+ - end time:      2014-01-01 23:59:00
+ - total records: 1440
+
+Current Status (2020-02-25 01:25:12):
+Process: nsaC1-tutorial_c-VAP
+Version: -1.0-0.dev1.4.19.76-linuxkit
+Host:    tutorial_c
+Status:  Successful
+
+
+Executable File Name:  tutorial_c
+Process Image Size:    264420 Kbytes
+Resident Set Size:     80748 Kbytes
+Total CPU Time:        4.91 seconds
+
+Run time: 28 seconds
+**** CLOSED: 2020-02-25 01:25:12

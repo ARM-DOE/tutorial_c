@@ -1,0 +1,378 @@
+{
+  'ret' => {
+    'fields' => [
+      {
+        'out' => [
+          {
+            'd' => 'tutorial30s.c1',
+            'f' => 'backscatter'
+          }
+        ],
+        'qc' => 0,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 1,
+        'max' => undef,
+        'name' => 'backscatter',
+        'vars' => [
+          [
+            'backscatter'
+          ],
+          [
+            'backscatter'
+          ]
+        ],
+        'dims' => [
+          'time',
+          'range'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'ceil',
+        'delta' => undef,
+        'shape' => 'half_min_grid',
+        'units' => '1/(sr*km*1000)'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'tutorial30s.c1',
+            'f' => 'temperature'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 1,
+        'max' => undef,
+        'name' => 'temperature',
+        'vars' => [
+          [
+            'temp_02m'
+          ],
+          [
+            'temp_02m'
+          ],
+          [
+            'temp_mean'
+          ],
+          [
+            'air_temp_mean_fahr'
+          ],
+          [
+            'temp_mean'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'temp30s',
+        'delta' => undef,
+        'shape' => 'half_min_grid',
+        'units' => ''
+      },
+      {
+        'out' => [
+          {
+            'd' => 'tutorial.c1',
+            'f' => 'temperature_ingest'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 1,
+        'max' => undef,
+        'name' => 'temperature_ingest',
+        'vars' => [
+          [
+            'temp_mean'
+          ],
+          [
+            'temp_mean'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'tingest',
+        'delta' => undef,
+        'shape' => 'metb1',
+        'units' => 'K'
+      },
+      {
+        'out' => [
+          {
+            'd' => 'tutorial.c1',
+            'f' => 'temperature_vap'
+          }
+        ],
+        'qc' => 1,
+        'window' => [
+          0,
+          0
+        ],
+        'min' => undef,
+        'reqd' => 1,
+        'max' => undef,
+        'name' => 'temperature_vap',
+        'vars' => [
+          [
+            'temp_02m'
+          ],
+          [
+            'air_temp_mean_fahr'
+          ]
+        ],
+        'dims' => [
+          'time'
+        ],
+        'dtype' => 'float',
+        'qcreqd' => 0,
+        'group' => 'tvap',
+        'delta' => undef,
+        'shape' => 'metb1',
+        'units' => ''
+      }
+    ],
+    'desc' => '',
+    'shapes' => {
+      'half_min_grid' => [
+        {
+          'talign' => -1,
+          'query' => undef,
+          'name' => 'time',
+          'vars' => [],
+          'interval' => '30',
+          'dtype' => undef,
+          'length' => 2880,
+          'ttype' => undef,
+          'trange' => undef,
+          'start' => '0',
+          'units' => undef
+        },
+        {
+          'talign' => 0,
+          'query' => undef,
+          'name' => 'range',
+          'vars' => [],
+          'interval' => '10',
+          'dtype' => undef,
+          'length' => 801,
+          'ttype' => undef,
+          'trange' => undef,
+          'start' => '0',
+          'units' => undef
+        }
+      ],
+      'metb1' => [
+        {
+          'talign' => 1,
+          'query' => 'tingest',
+          'name' => 'time',
+          'vars' => [
+            [
+              'time'
+            ],
+            [
+              'time'
+            ]
+          ],
+          'interval' => undef,
+          'dtype' => undef,
+          'length' => undef,
+          'ttype' => undef,
+          'trange' => undef,
+          'start' => undef,
+          'units' => undef
+        }
+      ]
+    },
+    'groups' => {
+      'temp30s' => [
+        'temp30s'
+      ],
+      'tvap' => [
+        'tvap'
+      ],
+      'tingest' => [
+        'tingest'
+      ],
+      'ceil' => [
+        'ceil'
+      ]
+    },
+    'name' => 'tutorial_c',
+    'queries' => {
+      'temp30s' => [
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'c1',
+          'site' => 'sgp',
+          'order' => 1,
+          'fac' => 'C1',
+          'class' => '1twrmr',
+          'sdep' => 'sgp',
+          'fdep' => 'E13'
+        },
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'c1',
+          'site' => 'sgp',
+          'order' => 2,
+          'fac' => 'C1',
+          'class' => '1twrmr',
+          'sdep' => 'sgp',
+          'fdep' => 'C1'
+        },
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'b1',
+          'site' => 'sgp',
+          'order' => 3,
+          'fac' => 'E13',
+          'class' => 'met',
+          'sdep' => 'sgp',
+          'fdep' => 'C1'
+        },
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'b1',
+          'site' => 'nsa',
+          'order' => 4,
+          'fac' => 'C1',
+          'class' => 'tps',
+          'sdep' => 'nsa',
+          'fdep' => 'C1'
+        },
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'b1',
+          'site' => undef,
+          'order' => 5,
+          'fac' => undef,
+          'class' => 'met',
+          'sdep' => undef,
+          'fdep' => undef
+        }
+      ],
+      'tvap' => [
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'c1',
+          'site' => 'sgp',
+          'order' => 1,
+          'fac' => 'C1',
+          'class' => '1twrmr',
+          'sdep' => 'sgp',
+          'fdep' => undef
+        },
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'b1',
+          'site' => 'nsa',
+          'order' => 2,
+          'fac' => 'C1',
+          'class' => 'tps',
+          'sdep' => 'nsa',
+          'fdep' => undef
+        }
+      ],
+      'tingest' => [
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'b1',
+          'site' => 'sgp',
+          'order' => 1,
+          'fac' => 'E13',
+          'class' => 'met',
+          'sdep' => 'sgp',
+          'fdep' => 'C1'
+        },
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'b1',
+          'site' => undef,
+          'order' => 2,
+          'fac' => undef,
+          'class' => 'met',
+          'sdep' => undef,
+          'fdep' => undef
+        }
+      ],
+      'ceil' => [
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'b1',
+          'site' => 'sgp',
+          'order' => 1,
+          'fac' => 'C1',
+          'class' => 'ceil',
+          'sdep' => 'sgp',
+          'fdep' => 'E13'
+        },
+        {
+          'tdep1' => undef,
+          'tdep0' => undef,
+          'level' => 'b1',
+          'site' => undef,
+          'order' => 2,
+          'fac' => undef,
+          'class' => 'ceil',
+          'sdep' => undef,
+          'fdep' => undef
+        }
+      ]
+    }
+  },
+  'locations' => [
+    {
+      'site' => 'nsa',
+      'fac' => 'C1'
+    },
+    {
+      'site' => 'sgp',
+      'fac' => 'C1'
+    },
+    {
+      'site' => 'sgp',
+      'fac' => 'E13'
+    }
+  ],
+  'outputs' => [
+    'tutorial30s.c1',
+    'tutorial.c1'
+  ],
+  'name' => 'tutorial_c',
+  'cdesc' => '',
+  'props' => {
+    'processing_interval' => '86400'
+  },
+  'desc' => '',
+  'type' => 'VAP',
+  'class' => 'tutorial_c',
+  'category' => 'VAP'
+}

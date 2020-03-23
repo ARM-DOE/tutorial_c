@@ -1,0 +1,661 @@
+%gDOD = (
+
+  'ds_class'    => 'tutorial.c1',
+  'dod_version' => '1.0',
+
+  'dims' => [
+    {
+      'name'   => 'time',
+      'length' => 0,
+    },
+    {
+      'name'   => 'bound',
+      'length' => 2,
+    },
+  ],
+  'atts' => [
+    {
+      'name'  => 'command_line',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'Conventions',
+      'type'  => 'char',
+      'value' => 'ARM-1.1',
+    },
+    {
+      'name'  => 'process_version',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'dod_version',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'input_datastreams',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'site_id',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'platform_id',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'facility_id',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'data_level',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'location_description',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'datastream',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'doi',
+      'type'  => 'char',
+    },
+    {
+      'name'  => 'history',
+      'type'  => 'char',
+    },
+  ],
+  'vars' => [
+    {
+      'name' => 'base_time',
+      'type' => 'int',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'string',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Base time in Epoch',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'seconds since 1970-1-1 0:00:00 0:00',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'time_offset',
+        },
+      ],
+    },
+    {
+      'name' => 'time_offset',
+      'type' => 'double',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Time offset from base_time',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'base_time',
+        },
+      ],
+    },
+    {
+      'name' => 'time',
+      'type' => 'double',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Time offset from midnight',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'bounds',
+          'type'  => 'char',
+          'value' => 'time_bounds',
+        },
+        {
+          'name'  => 'calendar',
+          'type'  => 'char',
+          'value' => 'gregorian',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'time',
+        },
+      ],
+    },
+    {
+      'name' => 'time_bounds',
+      'type' => 'double',
+      'dims' => 'time,bound',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Time cell bounds',
+        },
+        {
+          'name'  => 'bound_offsets',
+          'type'  => 'double',
+          'value' => '-60, 0',
+        },
+      ],
+    },
+    {
+      'name' => 'temperature_vap',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Temperature  from the vap input source',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'K',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'air_temperature',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'qc_temperature_vap',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_temperature_vap',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: Temperature  from the vap input source',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'unitless',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'QC_BAD:  Transformation could not finish, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_1_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_1_comment',
+          'type'  => 'char',
+          'value' => 'An example that will trip this bit is if all values are bad or outside range.',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'QC_INDETERMINATE:  Some, or all, of the input values used to create this output value had a QC assessment of Indeterminate.',
+        },
+        {
+          'name'  => 'bit_2_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_3_description',
+          'type'  => 'char',
+          'value' => 'QC_INTERPOLATE:  Indicates a non-standard interpolation using points other than the two that bracket the target index was applied.',
+        },
+        {
+          'name'  => 'bit_3_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_3_comment',
+          'type'  => 'char',
+          'value' => 'An example of why this may occur is if one or both of the nearest points was flagged as bad.  Applies only to interpolate transformation method.',
+        },
+        {
+          'name'  => 'bit_4_description',
+          'type'  => 'char',
+          'value' => 'QC_EXTRAPOLATE:  Indicates extrapolation is performed out from two points on the same side of the target index.',
+        },
+        {
+          'name'  => 'bit_4_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_4_comment',
+          'type'  => 'char',
+          'value' => 'This occurs because the input grid does not span the output grid, or because all the points within range and on one side of the target were flagged as bad.  Applies only to the interpolate transformation method.',
+        },
+        {
+          'name'  => 'bit_5_description',
+          'type'  => 'char',
+          'value' => 'QC_NOT_USING_CLOSEST:  Nearest good point is not the nearest actual point.',
+        },
+        {
+          'name'  => 'bit_5_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_5_comment',
+          'type'  => 'char',
+          'value' => 'Applies only to subsample transformation method.',
+        },
+        {
+          'name'  => 'bit_6_description',
+          'type'  => 'char',
+          'value' => 'QC_SOME_BAD_INPUTS:  Some, but not all, of the inputs in the averaging window were flagged as bad and excluded from the transform.',
+        },
+        {
+          'name'  => 'bit_6_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_6_comment',
+          'type'  => 'char',
+          'value' => 'Applies only to the bin average transformation method.',
+        },
+        {
+          'name'  => 'bit_7_description',
+          'type'  => 'char',
+          'value' => 'QC_ZERO_WEIGHT:  The weights for all the input points to be averaged for this output bin were set to zero.',
+        },
+        {
+          'name'  => 'bit_7_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_7_comment',
+          'type'  => 'char',
+          'value' => 'The output "average" value is set to zero, independent of the value of the input.  Applies only to bin average transformation method.',
+        },
+        {
+          'name'  => 'bit_8_description',
+          'type'  => 'char',
+          'value' => 'QC_OUTSIDE_RANGE:  No input samples exist in the transformation region, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_8_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_8_comment',
+          'type'  => 'char',
+          'value' => 'Nearest good bracketing points are farther away than the "range" transform parameter if transformation is done using the interpolate or subsample method, or "width" if a bin average transform is applied.  Test can also fail if more than half an input bin is extrapolated beyond the first or last point of the input grid.',
+        },
+        {
+          'name'  => 'bit_9_description',
+          'type'  => 'char',
+          'value' => 'QC_ALL_BAD_INPUTS:  All the input values in the transformation region are bad, value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_9_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_9_comment',
+          'type'  => 'char',
+          'value' => 'The transformation could not be completed. Values in the output grid are set to -9999 and the QC_BAD bit is also set.',
+        },
+        {
+          'name'  => 'bit_10_description',
+          'type'  => 'char',
+          'value' => 'QC_ESTIMATED_INPUT_BIN:  Bin
+size and/or alignment not given for input datastream, and therefore was estimated.',
+        },
+        {
+          'name'  => 'bit_10_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'bit_11_description',
+          'type'  => 'char',
+          'value' => 'QC_ESTIMATED_OUTPUT_BIN:  Bin size and/or alignment not given for output datastream, and
+therefore was estimated.',
+        },
+        {
+          'name'  => 'bit_11_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed integer values, where each bit represents a QC test on the data. Non-zero bits indicate the QC condition given in the description for those bits; a value of 0 (no bits set) indicates the data has not failed any QC tests.',
+        },
+      ],
+    },
+    {
+      'name' => 'temperature_ingest',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Temperature  from ingest data source',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'K',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'qc_temperature_ingest',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'air_temperature',
+        },
+        {
+          'name'  => 'valid_min',
+          'type'  => 'float',
+          'value' => '0',
+        },
+        {
+          'name'  => 'valid_max',
+          'type'  => 'float',
+          'value' => '100',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+      ],
+    },
+    {
+      'name' => 'qc_temperature_ingest',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Quality check results on field: Temperature  from ingest data source',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'unitless',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains bit packed integer values, where each bit represents a QC test on the data. Non-zero bits indicate the QC condition given in the description for those bits; a value of 0 (no bits set) indicates the data has not failed any QC tests.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'bit',
+        },
+        {
+          'name'  => 'bit_1_description',
+          'type'  => 'char',
+          'value' => 'Transformation could not finish (all values bad or outside range, etc.), value set to missing_value.',
+        },
+        {
+          'name'  => 'bit_1_assessment',
+          'type'  => 'char',
+          'value' => 'Bad',
+        },
+        {
+          'name'  => 'bit_2_description',
+          'type'  => 'char',
+          'value' => 'Transformation resulted in an indeterminate outcome.',
+        },
+        {
+          'name'  => 'bit_2_assessment',
+          'type'  => 'char',
+          'value' => 'Indeterminate',
+        },
+      ],
+    },
+    {
+      'name' => 'temperature',
+      'type' => 'float',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Preferred temperature',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'K',
+        },
+        {
+          'name'  => 'missing_value',
+          'type'  => 'float',
+          'value' => '-9999',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'air_temperature',
+        },
+        {
+          'name'  => 'ancillary_variables',
+          'type'  => 'char',
+          'value' => 'source_temperature',
+        },
+        {
+          'name'  => 'comment',
+          'type'  => 'char',
+          'value' => 'the highest of the temperature_vap and temperature_ingest values',
+        },
+        {
+          'name'  => 'cell_transform',
+          'type'  => 'char',
+        },
+      ],
+    },
+    {
+      'name' => 'source_temperature',
+      'type' => 'int',
+      'dims' => 'time',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Source for field: Preferred temperature',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'unitless',
+        },
+        {
+          'name'  => 'description',
+          'type'  => 'char',
+          'value' => 'This field contains integer values which should be interpreted as listed. A value of 0 represents no source available.',
+        },
+        {
+          'name'  => 'flag_method',
+          'type'  => 'char',
+          'value' => 'integer',
+        },
+        {
+          'name'  => 'flag_0_description',
+          'type'  => 'char',
+          'value' => 'no_source_available',
+        },
+        {
+          'name'  => 'flag_1_description',
+          'type'  => 'char',
+          'value' => 'sgpmetC1.b1:temp_mean',
+        },
+        {
+          'name'  => 'flag_2_description',
+          'type'  => 'char',
+          'value' => 'sgpmetE13.b1:temp_mean',
+        },
+        {
+          'name'  => 'flag_3_description',
+          'type'  => 'char',
+          'value' => 'nsametC1.b1:temp_mean',
+        },
+        {
+          'name'  => 'flag_4_description',
+          'type'  => 'char',
+          'value' => 'sgp1twrmrC1.c1:temp_02m',
+        },
+        {
+          'name'  => 'flag_5_description',
+          'type'  => 'char',
+          'value' => 'nsatpsC1.b1:air_temp_mean_fahr',
+        },
+      ],
+    },
+    {
+      'name' => 'lat',
+      'type' => 'float',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'North latitude',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'degree_N',
+        },
+        {
+          'name'  => 'valid_min',
+          'type'  => 'float',
+          'value' => '-90',
+        },
+        {
+          'name'  => 'valid_max',
+          'type'  => 'float',
+          'value' => '90',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'latitude',
+        },
+      ],
+    },
+    {
+      'name' => 'lon',
+      'type' => 'float',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'East longitude',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'degree_E',
+        },
+        {
+          'name'  => 'valid_min',
+          'type'  => 'float',
+          'value' => '-180',
+        },
+        {
+          'name'  => 'valid_max',
+          'type'  => 'float',
+          'value' => '180',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'longitude',
+        },
+      ],
+    },
+    {
+      'name' => 'alt',
+      'type' => 'float',
+      'dims' => '',
+      'atts' => [
+        {
+          'name'  => 'long_name',
+          'type'  => 'char',
+          'value' => 'Altitude above mean sea level',
+        },
+        {
+          'name'  => 'units',
+          'type'  => 'char',
+          'value' => 'm',
+        },
+        {
+          'name'  => 'standard_name',
+          'type'  => 'char',
+          'value' => 'altitude',
+        },
+      ],
+    },
+  ],
+);
+

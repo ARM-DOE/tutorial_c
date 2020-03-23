@@ -1,0 +1,22 @@
+version: "3.7"
+ 
+services:
+  tutorial_c:
+    build: .
+    image: tutorial_c
+    container_name: tutorial_c
+    hostname: tutorial_c
+
+    volumes: # mounted at runtime
+      - ${DATA_FOLDER}:/data # mount data folder
+      - ../.:/home/armdev7/code.arm.gov/vap/tutorial_c # mount code project
+      - /home/armdev7/code.arm.gov/vap/tutorial_c/docker # but ignore the docker folder
+
+    environment:
+      - PCM_URL=${PCM_URL}
+      - PROCESS_TYPE=vap
+      - PROCESS_NAME=tutorial_c
+
+    ports: # so local IDE like pycharm can connect to docker remote interpreter
+      - "${SSH_PORT}:22"
+

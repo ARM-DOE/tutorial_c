@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Post install script for the vap-tutorial_c_conf package.
+#
+if [ -z "$HOME" ]; then export HOME="/home/cm"; fi
+if [ -z "$DSDB_HOME" ]; then export DSDB_HOME="/apps/ds"; fi
+if [ -z "$PERLLIB" ]; then export PERLLIB="$DSDB_HOME/lib"; fi
+if [ -z "$VAP_HOME" ]; then export VAP_HOME="/apps/process"; fi
+
+$DSDB_HOME/bin/db_import_process $VAP_HOME/conf/vap/tutorial_c/tutorial_c.process
+$DSDB_HOME/bin/db_load_dod -q    $VAP_HOME/conf/vap/tutorial_c/tutorial.c1-1.0.dod
+$DSDB_HOME/bin/db_load_dod -q    $VAP_HOME/conf/vap/tutorial_c/tutorial30s.c1-1.0.dod
